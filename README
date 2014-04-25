@@ -1,0 +1,14 @@
+keyswap-mode
+Chuck Hoffman, 2014
+
+A simple minor mode to remap certain keys
+
+example configuration:
+(require 'keyswap-mode)
+(setq keyswap-pairs
+      '((?! ?1) (?@ ?2) (?# ?3) (?$ ?4) (?% ?5)
+        (?^ ?6) (?& ?7) (?* ?8) (?( ?9) (?) ?0)
+        (?{ ?[) (?} ?])))
+(global-set-key [M-f10] 'keyswap-mode)
+
+license: http://www.wtfpl.net/txt/copying/
