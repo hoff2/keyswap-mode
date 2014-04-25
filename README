@@ -1,7 +1,8 @@
 keyswap-mode
 Chuck Hoffman, 2014
 
-A simple minor mode to remap certain keys
+A simple minor mode to remap certain keys. Inspired by something I saw
+on some blog a long time ago that I can't find now.
 
 example configuration:
 
