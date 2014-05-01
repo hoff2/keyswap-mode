@@ -10,9 +10,10 @@
   :group 'swap
   :after-hook
   (if keyswap-mode
-      (keyswap-swap-keys keyswap-pairs)
-    ; remove the keyboard-translate-table
-    (setq keyboard-translate-table nil)))
+      (progn (setq keyswap-original-table keyboard-translate-table)
+             (keyswap-swap-keys keyswap-pairs))
+    ; put the old table back
+    (setq keyboard-translate-table keyswap-original-table)))
 
 (defun keyswap-swap-keys (pairs)
   (unless (eq pairs nil)
